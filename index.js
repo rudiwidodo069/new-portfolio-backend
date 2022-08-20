@@ -19,7 +19,7 @@ const mailgun = mg({
     domain: process.env.MAILGUN_DOMAIN,
 });
 
-app.post('/api/v1/portfolio/send-email', (req, res) => {
+app.post('/portfolio/send-email', (req, res) => {
     const { nama, email, pesan } = req.body;
     mailgun.messages().send({
         from: email,
